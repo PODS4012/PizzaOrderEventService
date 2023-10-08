@@ -1,0 +1,7 @@
+﻿{
+  "eventName": "NewPizzaOrder",
+  "content": {
+    "TableNumber": 2,
+    "PizzaNumber": 3
+  }
+}
