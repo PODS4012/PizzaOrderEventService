@@ -11,7 +11,7 @@ public class EventStore : IEventStore
         Database.Where(e => e.SequenceNumber >= firstEventSequenceNumber && e.SequenceNumber <= lastEventSequenceNumber)
             .OrderBy(e => e.SequenceNumber);
 
-    public void Raise(string eventName, object content)
+    public void Raise(string eventName, PizzaOrderContent content)
     {
         var seqNumber = Interlocked.Increment(ref currentSequenceNumber);
         Database.Add(new PizzaOrderEvent(seqNumber, DateTimeOffset.UtcNow, eventName, content));

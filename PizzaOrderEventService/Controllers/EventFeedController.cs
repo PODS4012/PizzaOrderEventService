@@ -31,6 +31,6 @@ public class EventFeedController : ControllerBase
     public class RaiseEventRequest
     {
         public string EventName { get; set; }
-        public object Content { get; set; }
+        public PizzaOrderContent Content { get; set; }
     }
 }
